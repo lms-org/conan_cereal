@@ -19,3 +19,4 @@ config/
 CMakeLists.txt.user
 doku/html
 *.pyc
+conanbuildinfo.txt

@@ -7,6 +7,7 @@ class CerealConan(ConanFile):
     version = "1.2-0"
     license = "See: https://github.com/USCiLab/cereal/blob/master/LICENSE"
     url = "https://github.com/TimSimpson/conan-cereal"
+    exports = "include/*"
 
     def source(self):
        self.run("git clone https://github.com/USCiLab/cereal.git")
