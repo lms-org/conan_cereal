@@ -13,4 +13,5 @@ virtual void lmsDeserialize(std::istream &is,Type type = Type::BINARY) override 
     cereal::PortableBinaryInputArchive iarchive(is); \
     iarchive(*this); \
 }
+#endif //CEREAL_CEREALIZABLE_H
 
