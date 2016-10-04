@@ -5,11 +5,11 @@
 #include "cereal/archives/portable_binary.hpp"
 
 #define CEREAL_SERIALIZATION() \
-virtual void lmsSerialize(std::ostream &os) const override { \
+virtual void lmsSerialize(std::ostream &os,Type type = Type::BINARY) const override { \
     cereal::PortableBinaryOutputArchive oarchive(os); \
     oarchive(*this); \
 } \
-virtual void lmsDeserialize(std::istream &is) override { \
+virtual void lmsDeserialize(std::istream &is,Type type = Type::BINARY) override { \
     cereal::PortableBinaryInputArchive iarchive(is); \
     iarchive(*this); \
 }
